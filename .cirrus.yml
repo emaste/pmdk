@@ -1,0 +1,6 @@
+freebsd_instance:
+  image: freebsd-12-0-rc3-amd64
+
+task:
+  install_script: pkg install -y gmake
+  script: CFLAGS="-Wno-unused-value -DENODATA=ENOATTR" gmake
